@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Visual Showcase Gallery</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- ================= LOADER ================= -->
+
+    <div class="loader-wrapper">
+
+        <div class="loader"></div>
+
+    </div>
+    <!-- ================= HEADER ================= -->
+
+    <header class="hero" id="home">
+        <nav class="navbar">
+            <h1 class="logo">Visual<span>Showcase</span></h1>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content">
+            <h2>Creative Visual Experience</h2>
+            <p>
+                Explore modern photography, digital art, and inspiring visuals
+                in a premium interactive gallery.
+            </p>
+        </div>
+    </header>
+
+    <!-- ================= FILTER BUTTONS ================= -->
+
+    <section class="filter-section" id="gallery">
+
+        <button class="filter-btn active" data-filter="all">All</button>
+
+        <button class="filter-btn" data-filter="nature">Nature</button>
+
+        <button class="filter-btn" data-filter="technology">Technology</button>
+
+        <button class="filter-btn" data-filter="travel">Travel</button>
+
+        <button class="filter-btn" data-filter="architecture">Architecture</button>
+
+    </section>
+
+    <!-- ================= GALLERY SECTION ================= -->
+
+    <section class="gallery-container">
+
+        <!-- IMAGE CARD 1 -->
+
+        <div class="gallery-item nature">
+            <img src="./image 1.jpeg" alt="Nature Image">
+
+            <div class="overlay">
+                <h3>Green Forest</h3>
+                <p>Nature Collection</p>
+            </div>
+        </div>
+
+        <!-- IMAGE CARD 2 -->
+
+        <div class="gallery-item technology">
+            <img src="./image 2.jpeg" alt="Technology Image">
+
+            <div class="overlay">
+                <h3>Future Tech</h3>
+                <p>Technology Collection</p>
+            </div>
+        </div>
+
+        <!-- IMAGE CARD 3 -->
+
+        <div class="gallery-item travel">
+            <img src="./image 3.jpeg" alt="Travel Image">
+
+            <div class="overlay">
+                <h3>Mountain Journey</h3>
+                <p>Travel Collection</p>
+            </div>
+        </div>
+
+        <!-- IMAGE CARD 4 -->
+
+        <div class="gallery-item architecture">
+            <img src="./image 4.jpeg" alt="Architecture Image">
+
+            <div class="overlay">
+                <h3>Modern Building</h3>
+                <p>Architecture Collection</p>
+            </div>
+        </div>
+
+        <!-- IMAGE CARD 5 -->
+
+        <div class="gallery-item nature">
+            <img src="./image 5.jpeg" alt="Nature Image">
+
+            <div class="overlay">
+                <h3>Sunset View</h3>
+                <p>Nature Collection</p>
+            </div>
+        </div>
+
+        <!-- IMAGE CARD 6 -->
+
+        <div class="gallery-item technology">
+            <img src="./image 6.jpeg" alt="Technology Image">
+
+            <div class="overlay">
+                <h3>AI Innovation</h3>
+                <p>Technology Collection</p>
+            </div>
+        </div>
+
+    </section>
+    <!-- ================= COLLECTIONS SECTION ================= -->
+
+    <section class="collections" id="collections">
+
+        <h2>Featured Collections</h2>
+
+        <div class="collection-cards">
+
+            <div class="collection-card">
+                <h3>Nature World</h3>
+                <p>Explore forests, rivers, mountains, and natural beauty.</p>
+            </div>
+
+            <div class="collection-card">
+                <h3>Future Technology</h3>
+                <p>Modern AI, digital innovation, and futuristic concepts.</p>
+            </div>
+
+            <div class="collection-card">
+                <h3>Travel Stories</h3>
+                <p>Creative travel moments and cinematic destinations.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= LIGHTBOX ================= -->
+
+    <div class="lightbox">
+
+        <span class="close-btn">&times;</span>
+
+        <img class="lightbox-image" src="" alt="Preview">
+        <div class="image-counter"></div>
+
+        <button class="prev-btn">&#10094;</button>
+
+        <button class="next-btn">&#10095;</button>
+
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="contact">
+        <p>© 2026 Creative Visual Showcase | Designed By Muhammad Mudassar</p>
+        <script src="script.js"></script>
+    </footer>
+</body>
+
+</html>
