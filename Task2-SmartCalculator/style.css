@@ -1,0 +1,352 @@
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(135deg,
+            #141414,
+            #1f1f1f,
+            #111827);
+
+    overflow: hidden;
+}
+
+/* BACKGROUND GLOW */
+
+.background-glow {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    background: #7c3aed;
+
+    filter: blur(120px);
+
+    opacity: 0.25;
+
+    border-radius: 50%;
+}
+
+/* CALCULATOR CONTAINER */
+
+.calculator-container {
+    position: relative;
+
+    z-index: 2;
+}
+
+/* CALCULATOR */
+
+.calculator {
+    width: 360px;
+
+    padding: 22px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    backdrop-filter: blur(18px);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.4);
+
+    animation: fadeIn 1s ease;
+}
+
+/* DISPLAY */
+
+.display {
+    width: 100%;
+    height: 75px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 20px;
+
+    margin-bottom: 25px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color: white;
+
+    text-align: right;
+
+    padding: 20px;
+
+    font-size: 2.3rem;
+    font-weight: 500;
+
+    box-shadow:
+        inset 0 4px 10px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+}
+
+/* BUTTON GRID */
+
+.buttons {
+    transition: 0.2s ease;
+
+    cursor: pointer;
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+/* BUTTONS */
+
+button {
+    height: 62px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    color: white;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.25);
+
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+/* BUTTON CLICK EFFECT */
+
+button:active {
+
+    transform: scale(0.92);
+}
+
+/* HOVER EFFECT */
+
+button:hover {
+    transform: translateY(-3px);
+
+    background:
+        rgba(255, 255, 255, 0.12);
+}
+
+/* CLICK EFFECT */
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* OPERATOR BUTTONS */
+
+.operator {
+    background:
+        rgba(124, 58, 237, 0.25);
+
+    color: #c4b5fd;
+}
+
+/* EQUAL BUTTON */
+
+.equal {
+    grid-column: span 2;
+
+    background:
+        linear-gradient(135deg,
+            #7c3aed,
+            #9333ea);
+
+    color: white;
+
+    font-size: 1.4rem;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:480px) {
+
+    .calculator {
+        width: 95%;
+        padding: 20px;
+    }
+
+    button {
+        height: 65px;
+    }
+
+    .display {
+        font-size: 2rem;
+    }
+}
+
+/* HISTORY PANEL */
+
+.history-panel {
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.06);
+
+    max-height: 180px;
+
+    overflow-y: auto;
+}
+
+.history-panel h3 {
+    color: white;
+
+    margin-bottom: 15px;
+
+    font-size: 1rem;
+
+    font-weight: 500;
+}
+
+.history-list {
+    list-style: none;
+}
+
+.history-list li {
+    color: #d1d5db;
+
+    margin-bottom: 10px;
+
+    font-size: 0.95rem;
+
+    word-break: break-word;
+}
+
+/* FLOATING SHAPES */
+
+.floating-shape {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+
+    opacity: 0.18;
+
+    animation:
+        floatAnimation 10s infinite ease-in-out;
+}
+
+/* SHAPE 1 */
+
+.shape1 {
+    width: 250px;
+    height: 250px;
+
+    background: #9333ea;
+
+    top: 10%;
+    left: 10%;
+}
+
+/* SHAPE 2 */
+
+.shape2 {
+    width: 300px;
+    height: 300px;
+
+    background: #06b6d4;
+
+    bottom: 5%;
+    right: 10%;
+
+    animation-delay: 3s;
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes floatAnimation {
+
+    0% {
+        transform:
+            translateY(0px) translateX(0px);
+    }
+
+    50% {
+        transform:
+            translateY(-30px) translateX(20px);
+    }
+
+    100% {
+        transform:
+            translateY(0px) translateX(0px);
+    }
+}
+
+/* TIME INFO */
+
+.time-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    padding: 0 5px;
+}
+
+.live-time,
+.live-date {
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 0.85rem;
+
+    letter-spacing: 1px;
+}
