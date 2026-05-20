@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Music Player</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- MAIN CONTAINER -->
+
+    <main class="player-container">
+
+        <!-- PLAYLIST -->
+
+        <aside class="playlist">
+
+            <h2>
+                Naat Playlist
+            </h2>
+
+            <ul>
+
+                <!-- NAAT 1 -->
+
+                <li class="playlist-item active">
+
+                    <img src="./image1.jpeg" alt="cover">
+
+                    <div>
+
+                        <h4>
+                            Beshak Main Rangon Gul
+                        </h4>
+
+                        <p>
+                            Haqeeqat Mein Khuwar Hai Duniya
+                        </p>
+
+                    </div>
+
+                </li>
+
+                <!-- NAAT 2 -->
+
+                <li class="playlist-item">
+
+                    <img src="./image2.jpeg" alt="cover">
+
+                    <div>
+
+                        <h4>
+                            Main Qabar Andheri Mein
+                        </h4>
+
+                        <p>
+                            Ghabrao Ga Jab Tanha
+                        </p>
+
+                    </div>
+
+                </li>
+
+                <!-- NAAT 3 -->
+
+                <li class="playlist-item">
+
+                    <img src="./image3.jpeg" alt="cover">
+
+                    <div>
+
+                        <h4>
+                            Naam-e-Muhammad
+                        </h4>
+
+                        <p>
+                            Dil Ka Ujala Hai Naam-e-Muhammad
+                        </p>
+
+                    </div>
+
+                </li>
+
+                <!-- NAAT 4 -->
+
+                <li class="playlist-item">
+
+                    <img src="./image4.jpeg" alt="cover">
+
+                    <div>
+
+                        <h4>
+                            Nabi Ka Lab Par
+                        </h4>
+
+                        <p>
+                            Jo Zikr Aya Kamal Aya
+                        </p>
+
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- PLAYER SECTION -->
+
+        <section class="player">
+
+            <!-- MAIN COVER -->
+
+            <div class="cover-container">
+
+                <img src="./image 1.jpeg" alt="cover" class="main-cover">
+
+            </div>
+
+            <!-- ================= TRACK INFO ================= -->
+
+            <div class="track-info">
+
+                <h2 class="track-title">
+
+                    Beshak Main Rangon Gul
+
+                </h2>
+
+                <p class="track-artist">
+
+                    Haqeeqat Mein Khuwar Hai Duniya
+
+                </p>
+
+            </div>
+
+            <!-- ================= AUDIO ================= -->
+
+            <audio class="audio" src="./naat 1.mpeg">
+
+            </audio>
+
+            <!-- ================= PROGRESS AREA ================= -->
+
+            <div class="progress-area">
+
+                <span class="current-time">
+
+                    0:00
+
+                </span>
+
+                <input type="range" class="progress-bar" value="0" min="0" max="100">
+
+                <span class="duration">
+
+                    0:00
+
+                </span>
+
+            </div>
+
+            <!-- ================= CONTROLS ================= -->
+
+            <div class="controls">
+
+                <button class="prev-btn">
+
+                    ⏮
+
+                </button>
+
+                <button class="play-btn">
+
+                    ▶
+
+                </button>
+
+                <button class="next-btn">
+
+                    ⏭
+
+                </button>
+
+            </div>
+
+            <!-- ================= VOLUME ================= -->
+
+            <div class="volume-container">
+
+                <span>
+
+                    🔊
+
+                </span>
+
+                <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
